@@ -1,0 +1,86 @@
+<html>
+<center>
+  <head>
+    <title>punc·tu·a·tion</title>
+    <script>
+
+
+    function getSentence()
+    {
+      //Get the sentence from the textbox
+      //Then call "addQuestion()" passing the sentence to it
+
+
+      addQuestion();
+    }
+    function addQuestion()
+    {
+       //add a question mark to the end of the sentence
+        //Then call "addExclamation()" passing the sentence to it
+
+        var list = sentence + "?";
+
+        document.getElementById('output').value = list;
+        addExclamation();
+
+    }
+    function addExclamation()
+    {
+        //add an Exclamation mark to the end of the sentence
+        //Then call "addQuotes()" passing the sentence to it
+
+        var list = sentence + "?!";
+
+        document.getElementById('output').value = list;
+        addQuotes();
+    }
+    function addQuotes()
+    {
+        //add an Quotations AROUND the sentence
+
+        //Note: This might be tricky since quotes close
+        //strings of letters in javaScript, you will have
+        //to use  \" in the string to add the quotes.
+        // The \ before the " tells javascript to ignore
+        //the function of the quotes.
+
+        //Then call "addPeriod()" passing the sentence to it
+
+        var list = "\"\"" + sentence + "?!" + "\"\"";
+
+        document.getElementById('output').value = list;
+        addPeriod();
+    }
+    function addPeriod()
+    {
+        //add a period to the end of the sentence
+        //Then call "printSentence()" passing the sentence to it
+
+        var list = "\"\"" + sentence + "?!" + "\"\"" + ".";
+
+        document.getElementById('output').value = list;
+        printSentence();
+    }
+    function printSentence()
+    {
+        //Send the sentence to the span tag.
+        var sentence = document.getElementById("sentence").value;
+        var list = "\"\"" + sentence + "?!" + "\"\"" + ".";
+
+        document.getElementById("output").innerHTML = list;
+    }
+    </script>
+  </head>
+
+  <body>
+     <h1>Punc·tu·a·tion</h1>
+      <p>Type in a sentence. Click The Button.<br>
+         I will give it all the punctuation.</p>
+      <input type = "text" id = "sentence">
+      <br><br><br>
+      <input type = "button" value = "Add EveryThing" onclick = "getSentence()">
+      <br><br><hr><br><br>
+      <span id = "output"></span>
+  </body>
+</center>
+</html>

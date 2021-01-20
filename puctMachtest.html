@@ -1,0 +1,41 @@
+<html>
+<center>
+  <head>
+    <title>punc·tu·a·tion</title>
+    <script>
+
+    function getSentence()
+    {
+
+      var sentence = document.getElementById("sentence").value;
+      var list = "'\'" + sentence + "?!" + "'\'" + ".";
+      document.getElementById("output").innerHTML = list;
+
+      print();
+    }
+
+    print()
+    {
+      document.getElementById("output").innerHTML = list;
+    }
+
+    </script>
+    <style>
+    #output{
+      font-size: 40px;
+    }
+    </style>
+  </head>
+
+  <body>
+     <h1>Punc·tu·a·tion</h1>
+      <p>Type in a sentence. Click The Button.<br>
+         I will give it all the punctuation.</p>
+      <input type = "text" id = "sentence">
+      <br><br><br>
+      <input type = "button" value = "Add EveryThing" onclick = "getSentence()">
+      <br><br><hr><br><br>
+      <span id = "output"></span>
+  </body>
+</center>
+</html>
